@@ -37,7 +37,7 @@ class _MainAppState extends State<MainApp> {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) => create()));
                     },
-                    child: Text(
+                    child: const Text(
                       'shoop sweets',
                       style: TextStyle(
                           color: Color.fromARGB(255, 243, 235, 237),
