@@ -2,16 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'package:project4/evaluation.dart';
+import 'evaluation.dart';
 
-final s=GlobalKey<FormState>();
+final s = GlobalKey<FormState>();
 final TextEditingController emailcontroller = TextEditingController();
 final TextEditingController namecontroller = TextEditingController();
 final TextEditingController phonecontroller = TextEditingController();
 final TextEditingController address = TextEditingController();
 final TextEditingController passwordcontroller = TextEditingController();
 String _value = 'aleppo';
-var _item = ['aleppo' ,'hama', 'tartous', 'homs', 'latakia'];
+var _item = ['aleppo', 'hama', 'tartous', 'homs', 'latakia'];
 
 class create extends StatefulWidget {
   create({super.key});
@@ -128,11 +128,12 @@ class _createState extends State<create> {
                       Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(margin: EdgeInsets.all(10),
+                            Container(
+                              margin: EdgeInsets.all(10),
                               height: 40,
                               width: 450,
                               decoration: BoxDecoration(
-                                  color:  Color.fromARGB(255, 216, 160, 179),
+                                  color: Color.fromARGB(255, 216, 160, 179),
                                   borderRadius: BorderRadius.circular(30)),
                               child: Center(
                                 child: DropdownButton(
