@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sweet_store/cart.dart';
+import 'package:sweet_store/features/cart/presentation/cart.dart';
 
 class Global {
   static ValueNotifier<int> x1 = ValueNotifier(0);
@@ -22,15 +22,15 @@ class product extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.pink[200],
             ),
+            height: 370,
+            width: double.infinity,
             child: Image.asset(
               "image/Rectangle 9.png",
               height: 100,
               width: 50,
             ),
-            height: 370,
-            width: double.infinity,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
@@ -40,11 +40,11 @@ class product extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text(
+                    const Text(
                       "Donuts",
                       style: TextStyle(fontSize: 32),
                     ),
-                    Text("800 g", style: TextStyle(fontSize: 16)),
+                    const Text("800 g", style: TextStyle(fontSize: 16)),
 
                     Container(
                         child: ValueListenableBuilder(
@@ -53,7 +53,7 @@ class product extends StatelessWidget {
                               return Center(
                                 child: Text(
                                   '$value1',
-                                  style: TextStyle(fontSize: 24),
+                                  style: const TextStyle(fontSize: 24),
                                 ),
                               );
                             })),
@@ -65,7 +65,7 @@ class product extends StatelessWidget {
                     color: Colors.pink[200],
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  margin: EdgeInsets.all(16),
+                  margin: const EdgeInsets.all(16),
                   height: 80,
                   width: 300,
                   child: Row(
@@ -86,7 +86,7 @@ class product extends StatelessWidget {
                                       onPressed: () {
                                         Global.x1.value++;
                                       },
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.add,
                                       )));
                             }),
@@ -106,7 +106,7 @@ class product extends StatelessWidget {
                                 onPressed: () {
                                   if (Global.x1.value > 0) Global.x1.value--;
                                 },
-                                icon: Icon(Icons.remove),
+                                icon: const Icon(Icons.remove),
                               )));
                             }),
                       ),
@@ -119,11 +119,11 @@ class product extends StatelessWidget {
                                     return Center(
                                       child: Text(
                                         '$value',
-                                        style: TextStyle(fontSize: 24),
+                                        style: const TextStyle(fontSize: 24),
                                       ),
                                     );
                                   })),
-                          Text(
+                          const Text(
                             'spaces',
                             style: TextStyle(fontSize: 24),
                           ),
@@ -132,23 +132,23 @@ class product extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'Description',
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 42, fontWeight: FontWeight.w100),
                 ),
-                Text(
+                const Text(
                   'dyhcscoifduskowugikhd,xjukfgf yergssidldfdrihdc.xklifdjhjdjdjjjknuhf hfufjd   hrfhfu bhdj jjehgejkhkehf kweowsjkd jkhed,dske kehkkd,eifej jkjuiuf4eyjhcdlifuroh ',
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Container(
-                    margin: EdgeInsets.all(16),
+                    margin: const EdgeInsets.all(16),
                     height: 60,
                     width: 200,
                     child: ElevatedButton(
@@ -160,7 +160,7 @@ class product extends StatelessWidget {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => cart()));
                       },
-                      child: Text(
+                      child: const Text(
                         'Add to cart',
                         style: TextStyle(fontSize: 24),
                       ),

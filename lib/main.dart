@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sweet_store/core/extensions/context_extensions.dart';
 
-import 'createaccount.dart';
+import 'features/auth/presentation/pages/createaccount.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MaterialApp(home: MainApp()));
 }
 
 class MainApp extends StatefulWidget {
@@ -17,25 +18,28 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 213, 147, 169),
+      backgroundColor: const Color.fromARGB(255, 213, 147, 169),
       body: Container(
         child: Stack(children: [
-          Image.asset('images/all.png',
-              fit: BoxFit.cover, height: 700, width: 500),
-          Padding(padding: const EdgeInsets.all(2000)),
+          Image.asset('image/all.png',
+              fit: BoxFit.cover, height: context.height(), width: 500),
+          const Padding(padding: EdgeInsets.all(2000)),
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Center(
                 child: Center(
                   child: TextButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 223, 130, 161),
+                        backgroundColor:
+                            const Color.fromARGB(255, 223, 130, 161),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(80))),
                     onPressed: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => create()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const create()));
                     },
                     child: const Text(
                       'shoop sweets',
@@ -46,6 +50,9 @@ class _MainAppState extends State<MainApp> {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 50,
+              )
             ],
           )
         ]),

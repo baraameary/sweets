@@ -9,17 +9,17 @@ class arabicSweet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Western Sweets')),
+        title: const Center(child: Text('Western Sweets')),
         backgroundColor: Colors.pink[400],
       ),
       body: Container(
-        margin: EdgeInsets.only(top: 16),
+        margin: const EdgeInsets.only(top: 16),
         child: SingleChildScrollView(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 categor(
@@ -31,7 +31,7 @@ class arabicSweet extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => product()));
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 categor(
@@ -45,7 +45,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -69,7 +69,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -93,7 +93,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -117,7 +117,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -141,7 +141,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -165,7 +165,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -189,7 +189,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -202,7 +202,7 @@ class arabicSweet extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => product()));
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 categor(
                   color: Colors.pink[200],
                   photo: ('image/Rectangle 9.png'),
@@ -214,7 +214,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -227,7 +227,7 @@ class arabicSweet extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => product()));
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 categor(
                   color: Colors.green[200],
                   photo: ('image/Rectangle 9.png'),
@@ -239,7 +239,7 @@ class arabicSweet extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -267,6 +267,5 @@ class arabicSweet extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
