@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sweet_store/core/extensions/context_extensions.dart';
-
-import 'features/auth/presentation/pages/createaccount.dart';
+import 'package:sweet_store/evaluation.dart';
 
 void main() {
   runApp(const MaterialApp(home: MainApp()));
@@ -39,7 +38,7 @@ class _MainAppState extends State<MainApp> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const create()));
+                              builder: (context) => const Evaluation()));
                     },
                     child: const Text(
                       'shoop sweets',
